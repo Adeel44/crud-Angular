@@ -1,0 +1,48 @@
+<div id="sidebar">
+
+
+
+
+
+	<div class="client link">
+		<a (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"
+			routerLinkActive='active'>
+			Clients
+
+
+		</a>
+	</div>
+
+
+	<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+
+
+		<div class="link" routerLink="/client/create" routerLinkActive='active'>
+			Add
+			<!-- <a href="" routerLink="/client/create">ADD</a> -->
+
+		</div>
+		<div class="link" routerLink="/client/list" routerLinkActive='active'>
+			List
+
+		</div>
+
+
+	</div>
+
+	<div class="link" routerLink="/category/create" routerLinkActive='active'>
+		Add Category
+		<!-- <a href="" routerLink="/client/create">ADD</a> -->
+
+	</div>
+	<div class="link" routerLink="/category/list" routerLinkActive='active'>
+		List  Category
+
+	</div>
+
+
+	
+
+
+
+</div>

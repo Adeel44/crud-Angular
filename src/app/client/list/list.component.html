@@ -1,0 +1,49 @@
+<!-- <table  *ngFor="let list of clientList">
+     
+      <td>{{list.name}}</td>  
+      <td>{{list.description}}</td> 
+
+      <td> <button>Edit</button></td>
+    
+
+    </table> -->
+
+
+  <!-- <ng-container *ngIf="clientListdata">
+  </ng-container> -->
+
+  <div class="container-fluid mt-2">
+
+<table class="table border 2 px solid">
+    <thead>
+        <tr>
+            <th scope="col">Client Name</th>
+            <th scope="col">Detail</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of clientListdata | paginate: { itemsPerPage: 10, currentPage: p}">
+            <td>{{list.name}}</td>
+            <td>{{list.description}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" routerLink="/client/edit/{{list.id}}">Edit</button>
+                <button type="button" class="btn btn-danger btn-delete" (click)="deleteClient(list.id)">Delete</button>
+
+            </td>
+
+          
+
+        </tr>
+
+    </tbody>
+</table>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>
+
+
+
+
+

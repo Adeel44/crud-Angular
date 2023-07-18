@@ -1,0 +1,36 @@
+<!-- <pre>
+    {{categoryListdata|json}}
+
+</pre> -->
+
+<div class="container-fluid mt-2">
+
+    <table class="table border 2 px solid">
+        <thead>
+            <tr>
+                <th scope="col">Category Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of categoryListdata ">
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary" routerLink="/category/edit/{{item.id}}">Edit</button>
+                    <button type="button" class="btn btn-danger btn-delete" (click)="deleteCategory(item.id)">Delete</button>
+    
+                </td>
+    
+              
+    
+            </tr>
+    
+        </tbody>
+    </table>
+    
+    <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    
+    </div> -->
+

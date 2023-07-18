@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'c-crud';
+  // sidebarExpanded = true;
+
+  // Btn(){
+  //   alert("Hi")
+  // }
+
+
 }
